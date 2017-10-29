@@ -33,6 +33,7 @@ class MediaStoreDataLoader(context: Context) : AsyncTaskLoader<List<MediaStoreDa
 
     private var cached: List<MediaStoreData>? = null
     private var observerRegistered = false
+    // Loader 在 系统 contentProvider 放置的观察员
     private val forceLoadContentObserver = ForceLoadContentObserver()
 
     override fun deliverResult(data: List<MediaStoreData>?) {
